@@ -1,3 +1,12 @@
+.container {
+  width: 85%
+}
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
 nav {
   webkit box-shadow: none;
   box-shadow: none;
@@ -9,7 +18,44 @@ nav {
   margin: 4rem .5rem 0rem .5rem;
 }
 
+#basket {
+  height: 50px;
+}
+
 #menu {
   margin-top: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-floating {
+  webkit box-shadow: none;
+  box-shadow: none;
+}
+
+footer {
+  margin-top: 140px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h6 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+h5 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 24px;
 }
