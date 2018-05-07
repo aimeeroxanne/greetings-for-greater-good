@@ -12,14 +12,27 @@ nav {
   box-shadow: none;
 }
 
+nav a {
+    color: black;
+}
+
 .card {
   webkit box-shadow: none;
   box-shadow: none;
   margin: 4rem .5rem 0rem .5rem;
 }
 
+.card:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity:0.8;
+  transition: all .2s ease-in-out;
+}
+
 #basket {
   height: 50px;
+  color: white;
 }
 
 #menu {
@@ -35,11 +48,19 @@ nav {
   box-shadow: none;
 }
 
+.btn-flat {
+  min-width: 200px;
+}
+
 footer {
   margin-top: 140px;
   font-family: 'EB Garamond', serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+a {
+  color: black;
 }
 
 p {

@@ -7,6 +7,11 @@
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
      <link rel="stylesheet" href="cards.css">
+     <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+     <script src="js/shop.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
@@ -23,7 +28,7 @@
     <nav id="menu" class="white">
       <div class="container nav-wrapper">
         <a href="index.html" class="brand-logo grey-text text-darken-4">Greetings</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons grey darken-4">menu</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.html" class="grey-text text-darken-4">Shop</a></li>
           <li><a href="artists.html" class="grey-text text-darken-4">Artists</a></li>
@@ -34,18 +39,22 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="index.html">Shop</a></li>
-      <li><a href="artists.html">Artists</a></li>
-      <li><a href="organizations.html">Organizations</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <div class="container">
+        <li><h5>Menu</h5></li>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="organizations.html">Organizations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </div>
     </ul>
+
 
     <div class="container">
       <div class="row">
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/flowers.jpg">
+              <img src="img/shop/flowers.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -58,7 +67,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/palm.jpg">
+              <img src="img/shop/palm.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -71,7 +80,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/donuts.jpg">
+              <img src="img/shop/donuts.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -84,7 +93,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/script.jpg">
+              <img src="img/shop/script.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -97,7 +106,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/xmas1.jpg">
+              <img src="img/shop/xmas1.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -110,7 +119,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/mom.png">
+              <img src="img/shop/mom.png">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -123,7 +132,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/love.jpg">
+              <img src="img/shop/love.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
@@ -136,7 +145,7 @@
         <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
-              <img src="img/flower2.jpg">
+              <img src="img/shop/flower2.jpg">
               <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content center-align">
