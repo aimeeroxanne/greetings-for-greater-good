@@ -30,6 +30,10 @@ nav a {
   transition: all .2s ease-in-out;
 }
 
+.row .col {
+    padding: 0 .2rem 0 0;
+}
+
 #basket {
   height: 50px;
   color: white;

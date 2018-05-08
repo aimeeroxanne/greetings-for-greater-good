@@ -1,3 +1,5 @@
+console.log('hi!')
+
 let items = [
   {
     name: 'Flower Power',
@@ -74,25 +76,22 @@ let items = [
 
 $(document).ready(function(){
   $('.sidenav').sidenav();
+  let id = location.search.slice('1').split('=')[1]
 
-  for(let i = 0; i < items.length; i++){
+  let product = items[id]
+
     var itemHTML =
-      `<a href="product.html?id=${items[i].id}"><div class="card">
-          <div class="card-image">
-            <img src=${items[i].img}>
-            <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
-            </div>
-          <div class="card-content center-align">
-            <h6>${items[i].name}</h6>
-            <h6>$${items[i].price}</h6>
-            <p>${items[i].description}</p>
-          </div>
-        </div></a>`
+      `<div class="col s6 m6 l6">
+        <img src=${product.img}>
+      </div>
+      <div class="col s6 m6 l6">
+        <h5>${product.name}</h5>
+      </div>`
 
-    var shop = document.getElementById('shop')
+    var shop = document.getElementById('product')
     var card = document.createElement('div')
-    card.classList.add('col','s12','m6','l3')
+    card.classList.add('col','s6','m6','l6')
     card.innerHTML = itemHTML
     shop.appendChild(card)
-  }
+
 });
