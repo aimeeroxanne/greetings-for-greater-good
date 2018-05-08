@@ -22,16 +22,12 @@ nav a {
   margin: 4rem .5rem 0rem .5rem;
 }
 
-.card:hover {
+#shop .card:hover {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   opacity:0.8;
   transition: all .2s ease-in-out;
-}
-
-.row .col {
-    padding: 0 .2rem 0 0;
 }
 
 #basket {
@@ -54,6 +50,14 @@ nav a {
 
 .btn-flat {
   min-width: 200px;
+  text-align: center;
+}
+
+.btn-flat:hover {
+  opacity:0.8;
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 footer {
@@ -83,4 +87,10 @@ h5 {
   font-family: 'EB Garamond', serif;
   font-weight: 400;
   font-size: 24px;
+}
+
+.breadcrumb {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
 }

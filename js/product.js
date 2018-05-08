@@ -4,7 +4,8 @@ let items = [
   {
     name: 'Flower Power',
     type: 'mothers',
-    description: 'Hand painted card by Steph Stout for MESA - Moving to End Sexual Assault',
+    descriptionShort: 'Hand painted card by Steph Stout for MESA - Moving to End Sexual Assault',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/flowers.jpg',
     id: 0
@@ -13,7 +14,8 @@ let items = [
   {
     name: 'Live Life',
     type: 'thinking',
-    description: 'Hand drawn type by Elle Levy for MESA — Moving to End Sexual Assault',
+    descriptionShort: 'Hand drawn type by Elle Levy for MESA — Moving to End Sexual Assault',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/palm.jpg',
     id: 1
@@ -22,7 +24,8 @@ let items = [
   {
     name: 'You Are Special',
     type: 'birthday',
-    description: '3D card perfect for your pastry loving bff. Collaged by Michelle Merlin for MESA',
+    descriptionShort: '3D card perfect for your pastry loving bff. Collaged by Michelle Merlin for MESA',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/donuts.jpg',
     id: 2
@@ -31,7 +34,8 @@ let items = [
   {
     name: 'Merry',
     type: 'holiday',
-    description: 'Simple non-denominational holiday card by Steph Stout for MESA',
+    descriptionShort: 'Simple non-denominational holiday card by Steph Stout for MESA',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/love.jpg',
     id: 3
@@ -40,7 +44,8 @@ let items = [
   {
     name: 'Wildflowers',
     type: 'thinking',
-    description: 'Lovely hand painted wildflowers for your hippie friend, lover or sibling. By Optimystic for MESA',
+    descriptionShort: 'Lovely hand painted wildflowers for your hippie friend, lover or sibling. By Optimystic for MESA',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/flower2.jpg',
     id: 4
@@ -49,7 +54,8 @@ let items = [
   {
     name: 'Mom',
     type: 'mothers',
-    description: 'Cut paper card for your hella special mother by Elle Levy for MESA',
+    descriptionShort: 'Cut paper card for your hella special mother by Elle Levy for MESA',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/mom.png',
     id: 5
@@ -58,16 +64,18 @@ let items = [
   {
     name: 'Christmas',
     type: 'holiday',
-    description: 'Classic Christmas card with gold leaf lettering By Optimystic for MESA',
+    descriptionShort: 'Classic Christmas card with gold leaf lettering By Optimystic for MESA',
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/xmas1.jpg',
     id: 6
   },
 
   {
-    name: 'Cuando LLueva',
+    name: 'Cuando Llueva',
     type: 'birthday',
-    description: "A Birthday isn't always a joyous occasion. By Elle Levy for MESA",
+    descriptionShort: "A Birthday isn't always a joyous occasion. By Elle Levy for MESA",
+    descriptionLong: "Twitter termsheet iPad. Funding product management user experience technology stock. Disruptive incubator client A/B testing. Innovator venture deployment infographic. Venture incubator rockstar hypotheses marketing alpha buyer conversion vesting period interaction design ownership.",
     price: 5,
     img: 'img/shop/script.jpg',
     id: 7
@@ -81,17 +89,21 @@ $(document).ready(function(){
   let product = items[id]
 
     var itemHTML =
-      `<div class="col s6 m6 l6">
-        <img src=${product.img}>
+      `<div class="col s12">
+        <a href="#!" class="breadcrumb black-text">shop</a>
+        <a href="#!" class="breadcrumb black-text">${product.name}</a>
       </div>
-      <div class="col s6 m6 l6">
-        <h5>${product.name}</h5>
+      <div>
+        <img src=${product.img} class="col s12 m6 l6">
+      </div>
+      <div class="product-description col s12 m6 l6">
+        <h5>${product.name} — $${product.price}</h5>
+        <p>${product.descriptionLong}</p>
+        <a href="#" class="waves-effect waves-teal btn-flat pink accent-1" target="_blank">Add to Cart</a>
       </div>`
 
-    var shop = document.getElementById('product')
-    var card = document.createElement('div')
-    card.classList.add('col','s6','m6','l6')
-    card.innerHTML = itemHTML
-    shop.appendChild(card)
+    var productPage = document.getElementById('product')
+
+    productPage.innerHTML = itemHTML
 
 });
