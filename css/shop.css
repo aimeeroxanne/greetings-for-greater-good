@@ -92,3 +92,11 @@ h5 {
 .input-field>label{
   top: -40px;
 }
+
+span.badge {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: black;
+    background-color: white;
+    border-radius: 1px;
+}

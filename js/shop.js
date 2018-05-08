@@ -99,13 +99,14 @@ $(document).ready(function(){
   var plusButton = document.getElementsByClassName('btn-floating')
   console.log(plusButton)
 
-  var badgeHTML = `<span class="new badge">4</span>`
+  let count = 1
 
   for (let i = 0; i < plusButton.length; i++){
     plusButton[i].addEventListener('click', function(){
       var badge = document.getElementById('badge')
-      console.log(badge)
+      var badgeHTML = `<span class="badge">${count}</span>`
       badge.innerHTML = badgeHTML
+      count++
     })
   }
 
