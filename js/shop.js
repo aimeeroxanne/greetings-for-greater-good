@@ -80,7 +80,7 @@ $(document).ready(function(){
       `<a href="product.html?id=${items[i].id}"><div class="card">
           <div class="card-image">
             <img src=${items[i].img}>
-            <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3"><i class="material-icons">add</i></a>
+            <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3" href="#"><i class="material-icons">add</i></a>
             </div>
           <div class="card-content center-align">
             <h6>${items[i].name}</h6>
@@ -95,4 +95,18 @@ $(document).ready(function(){
     card.innerHTML = itemHTML
     shop.appendChild(card)
   }
+
+  var plusButton = document.getElementsByClassName('btn-floating')
+  console.log(plusButton)
+
+  var badgeHTML = `<span class="new badge">4</span>`
+
+  for (let i = 0; i < plusButton.length; i++){
+    plusButton[i].addEventListener('click', function(){
+      var badge = document.getElementById('badge')
+      console.log(badge)
+      badge.innerHTML = badgeHTML
+    })
+  }
+
 });

@@ -16,6 +16,35 @@ nav a {
     color: black;
 }
 
+footer {
+  margin-top: 140px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+a {
+  color: black;
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h6 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+h5 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
 .card {
   webkit box-shadow: none;
   box-shadow: none;
@@ -60,37 +89,6 @@ nav a {
   transform: scale(1.02);
 }
 
-footer {
-  margin-top: 140px;
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-a {
-  color: black;
-}
-
-p {
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-h6 {
-  font-family: 'EB Garamond', serif;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-h5 {
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 24px;
-}
-
-.breadcrumb {
-  font-family: 'EB Garamond', serif;
-  font-weight: 400;
-  font-size: 16px;
+.input-field>label{
+  top: -40px;
 }

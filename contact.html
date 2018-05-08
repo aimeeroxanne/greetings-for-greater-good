@@ -6,7 +6,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" media="screen,projection">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
-     <link rel="stylesheet" href="cards.css">
+     <link rel="stylesheet" href="css/cards.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
@@ -44,26 +44,26 @@
         <h5 class="section center-align">Fellow stationary nerd? Non Profit on a mission to save the world? Trying to make it as an artist and do some good along the way? Send us a letter!</h5>
       </div>
         <div class="container">
-          <form class="col s8 center-align section">
+          <form action="https://formspree.io/aimee@tna.digital" method="POST" class="col s8 center-align section">
             <div class="row">
               <div class="input-field col s6">
-                <input id="first_name" type="text">
+                <input name="first name" id="first_name" type="text" required>
                 <label for="first_name">First Name</label>
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text">
+                <input name="last name" id="last_name" type="text">
                 <label for="last_name">Last Name</label>
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s12">
+              <div name="email" class="input-field col s12">
                 <input id="email" type="email">
                 <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-              <textarea id="message" class="materialize-textarea"></textarea>
+              <textarea name="message" id="message" class="materialize-textarea"></textarea>
               <label for="textarea1">Message</label>
             </div>
           </div>

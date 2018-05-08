@@ -1,0 +1,71 @@
+.container {
+  width: 85%
+}
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+nav {
+  webkit box-shadow: none;
+  box-shadow: none;
+}
+
+nav a {
+    color: black;
+}
+
+footer {
+  margin-top: 140px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+a {
+  color: black;
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h6 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+h5 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+#basket {
+  height: 50px;
+  color: white;
+}
+
+#menu {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-flat {
+  min-width: 200px;
+  text-align: center;
+}
+
+.btn-flat:hover {
+  opacity:0.8;
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
