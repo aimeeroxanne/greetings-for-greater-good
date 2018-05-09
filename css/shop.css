@@ -78,7 +78,7 @@ h5 {
 }
 
 .btn-flat {
-  min-width: 200px;
+  min-width: 175px;
   text-align: center;
 }
 
@@ -91,6 +91,10 @@ h5 {
 
 .input-field>label{
   top: -40px;
+}
+
+.card .card-content {
+  padding: 0;
 }
 
 span.badge {
