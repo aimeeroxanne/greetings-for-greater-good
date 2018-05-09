@@ -29,13 +29,34 @@ $.getJSON("js/items.json", function(data) {
 
   let count = 1
 
+let storage = []
+
   for (let i = 0; i < plusButton.length; i++){
+    plusButton[i].setAttribute('id', `${i}`)
     plusButton[i].addEventListener('click', function(){
+      storage.push(i)
+      localStorage.setItem("item", JSON.stringify(storage))
       var badge = document.getElementById('badge')
       var badgeHTML = `<span class="badge">${count}</span>`
       badge.innerHTML = badgeHTML
       count++
     })
   }
+
 });
 });
+
+// <div class="item row section">
+//   <div class="col s2 m2 l2">
+//     <i class="material-icons">close</i>
+//   </div>
+//   <img class="col s3 m3 l3" src="img/shop/flowers.jpg">
+//   <div class="col s3 m4 l4">
+//     <h5>Mom Card</h5>
+//     <p>36 card perfect for your pastry loving bff. Collaged by Michelle Merlin for MESA</p>
+//   </div>
+//   <div class="col s2 m2 l2 right">
+//     <h5 class"align-right">$5</h5>
+//   </div>
+// </div>
+// <div class="divider"></div>

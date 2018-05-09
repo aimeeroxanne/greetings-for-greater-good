@@ -58,6 +58,11 @@ h5 {
   font-size: 16px;
 }
 
+.col .row {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
 .btn-flat {
   min-width: 200px;
   text-align: center;
@@ -68,4 +73,9 @@ h5 {
   -webkit-transform: scale(1.02);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
+}
+
+.divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

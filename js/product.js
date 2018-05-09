@@ -17,6 +17,10 @@ $(document).ready(function(){
         <p>${product.descriptionLong}</p>
         <a href="#" class="waves-effect waves-teal btn-flat pink accent-1" target="_blank">Add to Cart</a><br>
         <div class="col s12 m6 l6">
+        h5>${product.name} — $${product.price}</h5>
+        <p>${product.descriptionLong}</p>
+        <a href="#" class="waves-effect waves-teal btn-flat pink accent-1" target="_blank">Add to Cart</a><br>
+        <div class="col s12 m6 l6">
         </div>
       </div>`
 
