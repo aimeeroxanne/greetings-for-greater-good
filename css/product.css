@@ -16,6 +16,11 @@ nav a {
     color: black;
 }
 
+#product{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 #basket {
   height: 50px;
   color: white;

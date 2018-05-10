@@ -33,7 +33,8 @@ let storage = []
 
   for (let i = 0; i < plusButton.length; i++){
     plusButton[i].setAttribute('id', `${i}`)
-    plusButton[i].addEventListener('click', function(){
+    plusButton[i].addEventListener('click', function(event){
+      event.preventDefault()
       storage.push(i)
       localStorage.setItem("item", JSON.stringify(storage))
       var badge = document.getElementById('badge')

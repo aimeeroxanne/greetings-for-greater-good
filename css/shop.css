@@ -100,7 +100,6 @@ h5 {
 span.badge {
     font-weight: 300;
     font-size: 0.8rem;
-    color: black;
-    background-color: white;
-    border-radius: 1px;
+    color: white;
+    width: 10px;
 }
