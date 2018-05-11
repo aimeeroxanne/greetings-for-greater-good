@@ -13,7 +13,7 @@ $.getJSON("js/items.json", function(data) {
         var itemHTML =
           `<div class="holder" id="${data[i].id}"><div class="item row section">
             <div class="col s2 m2 l2">
-              <i class="close material-icons">close</i>
+              <i class="close material-icons" style="cursor:default">close</i>
             </div>
             <img class="col s2 m2 l2" src="${data[i].img}">
             <div class="col s3 m5 l5">
@@ -66,7 +66,6 @@ $.getJSON("js/items.json", function(data) {
 
 
   let close = document.getElementsByClassName('close')
-
   // console.log(close)
 
   for (let i = 0; i < close.length; i++) {
