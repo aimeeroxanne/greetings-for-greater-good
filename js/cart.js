@@ -1,18 +1,18 @@
-$.getJSON("js/items.json", function(data){
+$.getJSON("js/items.json", function(data) {
   console.log(data)
 
-let storage = JSON.parse(localStorage.getItem("item"))
-  console.log("local storage"+storage)
+// Getting the array of id's in localStorage
 
-  for(let j = 0; j < storage.length; j++){
-    // console.log(storage[j])
-    for(let i = 0; i < data.length; i++){
-      // console.log(data[i])
-      if(storage[j] === data[i].id){
-        // console.log('add item to cart')
+  let storage = JSON.parse(localStorage.getItem("item"))
+
+// Compares id's stored in localStorage array to id's of products in items.json
+
+  for (let j = 0; j < storage.length; j++) {
+    for (let i = 0; i < data.length; i++) {
+      if (storage[j] === data[i].id) {
 
         var itemHTML =
-          `<div class="holder"><div class="item row section">
+          `<div class="holder" id="${data[i].id}"><div class="item row section">
             <div class="col s2 m2 l2">
               <i class="close material-icons">close</i>
             </div>
@@ -38,36 +38,49 @@ let storage = JSON.parse(localStorage.getItem("item"))
   }
 
 
-//Inside $.getJSON but outside loops
+  // Getting all prices from cart using the class 'price'
 
   let prices = document.getElementsByClassName('price')
   let total = []
 
-  for(let k = 0; k < prices.length; k++){
-      let result = prices[k].innerHTML.split('')
-      // console.log(result[1])
-      total.push(result[1])
+  // Looping through the returned array of h5 values and splitting them ["$5"] -> ["$", "5"], pushing the second value ["5"] to total array
+
+  for (let k = 0; k < prices.length; k++) {
+    let result = prices[k].innerHTML.split('')
+    total.push(result[1])
   }
 
-  function add(arr){
-    return arr.map(Number).reduce((a,b)=>a+b)
+  // ["5", "5", "5", "5"] -> 20 (applying .map to total to parse strings to numbers, then applying .reduce to get the total)
+
+  function add(arr) {
+    return arr.map(Number).reduce((a, b) => a + b)
   }
+
+  // passing total to add function and storing it in variable parsedTotal
 
   let parsedTotal = add(total)
-  console.log(total)
-  console.log(parsedTotal)
+
+  //getting cart total h5, storing it in variable printedTotal and setting the innerHTML to parsedTotal with string interpolation
 
   let printedTotal = document.getElementById('cart-total')
-
   printedTotal.innerHTML = `Total $${parsedTotal}`
 
-  var close = document.getElementsByClassName('close')
+  //
+
+  let close = document.getElementsByClassName('close')
 
   // console.log(close)
 
-  for (let i = 0; i < close.length; i++){
-    close[i].addEventListener('click', function(){
+  for (let i = 0; i < close.length; i++) {
+    close[i].addEventListener('click', function() {
       close[i].parentNode.parentNode.parentNode.remove()
+      let itemId = event.target.parentNode.parentNode.parentNode.getAttribute('id')
+      let storageElement = storage.indexOf(parseInt(itemId))
+
+      let newStorageElement = storage.splice((storageElement-1), 1)
+
+      localStorage.setItem("item", JSON.stringify(newStorageElement))
+      console.log(newStorageElement)
     })
   }
 

@@ -21,8 +21,8 @@ $(document).ready(function(){
         <br>
         <div class="divider"></div>
         <div class="row section">
-          <img src="${product.charityImg}" class="col m4 l4">
-          <div class="col m8 l8">
+          <img src="${product.charityImg}" class="col s12 m4 l4">
+          <div class="col s12 m8 l8">
             <h5>${product.charity}</h5>
             <p>${product.charityDescription}</p>
           </div>
