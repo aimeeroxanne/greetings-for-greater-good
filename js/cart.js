@@ -1,5 +1,4 @@
 $.getJSON("js/items.json", function(data) {
-  console.log(data)
 
 // Getting the array of id's in localStorage
 
@@ -65,7 +64,6 @@ $.getJSON("js/items.json", function(data) {
   let printedTotal = document.getElementById('cart-total')
   printedTotal.innerHTML = `Total $${parsedTotal}`
 
-  //
 
   let close = document.getElementsByClassName('close')
 
@@ -76,11 +74,18 @@ $.getJSON("js/items.json", function(data) {
       close[i].parentNode.parentNode.parentNode.remove()
       let itemId = event.target.parentNode.parentNode.parentNode.getAttribute('id')
       let storageElement = storage.indexOf(parseInt(itemId))
+      console.log(storageElement)
 
-      let newStorageElement = storage.splice((storageElement-1), 1)
+      storage.splice((storageElement), 1)
 
-      localStorage.setItem("item", JSON.stringify(newStorageElement))
-      console.log(newStorageElement)
+      console.log(storage)
+
+      localStorage.setItem("item", JSON.stringify(storage))
+      console.log(storage)
+
+      if (storage.length === 1){
+        localStorage.clear()
+      }
     })
   }
 

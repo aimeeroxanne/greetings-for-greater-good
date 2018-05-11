@@ -16,7 +16,7 @@ $(document).ready(function(){
         <div>
           <h5>${product.name} — $${product.price}</h5>
           <p>${product.descriptionLong}</p>
-          <a href="#" class="waves-effect waves-white btn-flat pink accent-1">Add to Cart</a>
+          <a href="#" class="waves-effect waves-white btn-flat pink accent-1 product-button">Add to Cart</a>
         </div>
         <br>
         <div class="divider"></div>
@@ -32,6 +32,31 @@ $(document).ready(function(){
     var productPage = document.getElementById('product')
 
     productPage.innerHTML = itemHTML
+
+    // var toCartButton = document.getElementsByClassName('product-button')[0]
+    //
+    // let storage = []
+    //
+    // let currentStorage = JSON.parse(localStorage.getItem("item"))
+    //
+    // console.log(currentStorage)
+    //
+    // toCartButton.addEventListener('click', function(event) {
+    //   event.preventDefault()
+    //
+    //   if(currentStorage === null){
+    //     storage.push(product.id)
+    //     localStorage.setItem("item", JSON.stringify(storage))
+    //   }
+    //
+    //   else if(currentStorage !== null){
+    //     localStorage.setItem("item", JSON.stringify(storage))
+    //   }
+    //
+    //   var badge = document.getElementById('badge')
+    //   var badgeHTML = `<span class="badge">1</span>`
+    //   badge.innerHTML = badgeHTML
+    //   })
 
   });
 
