@@ -52,11 +52,7 @@ h5 {
 }
 
 #shop .card:hover {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
   opacity:0.8;
-  transition: all .2s ease-in-out;
 }
 
 #basket {
@@ -76,6 +72,13 @@ h5 {
   webkit box-shadow: none;
   box-shadow: none;
 }
+
+/* .btn-floating:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: all .2s ease-in-out;
+} */
 
 .btn-flat {
   min-width: 175px;

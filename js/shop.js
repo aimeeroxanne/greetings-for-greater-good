@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('.sidenav').sidenav();
+  $('.tooltipped').tooltip({delay:50});
 
   $.getJSON("js/items.json", function(data) {
 
@@ -8,7 +9,7 @@ $(document).ready(function() {
         `<a href="product.html?id=${data[i].id}"><div class="card">
           <div class="card-image">
             <img src=${data[i].img}>
-            <a class="btn-floating halfway-fab waves-effect waves-light grey lighten-3" href="#"><i class="material-icons">add</i></a>
+            <a class="btn tooltipped btn-floating halfway-fab waves-effect waves-light grey lighten-3" data-position="top" data-tooltip="ADD TO CART"><i class="material-icons">add</i></a>
             </div>
           <div class="card-content center-align">
             <h6>${data[i].name}</h6>
