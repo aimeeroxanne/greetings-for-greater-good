@@ -86,6 +86,10 @@ $.getJSON("js/items.json", function(data) {
       if (storage.length === 1){
         localStorage.clear()
       }
+
+      parsedTotal = parsedTotal-5
+      printedTotal.innerHTML = `Total $${parsedTotal}`
+
     })
   }
 

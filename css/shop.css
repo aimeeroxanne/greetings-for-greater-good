@@ -73,12 +73,12 @@ h5 {
   box-shadow: none;
 }
 
-/* .btn-floating:hover {
+.btn-floating:hover {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   transition: all .2s ease-in-out;
-} */
+}
 
 .btn-flat {
   min-width: 175px;
