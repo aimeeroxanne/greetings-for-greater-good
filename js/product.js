@@ -1,12 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $('.sidenav').sidenav();
 
   $.getJSON("js/items.json", function(data) {
 
-  let id = location.search.slice('1').split('=')[1]
-
-  let product = data[id]
-
+    let id = location.search.slice('1').split('=')[1]
+    let product = data[id]
     var itemHTML =
       `<div>
         <img src=${product.img} class="col s12 m12 l6">
@@ -29,34 +27,31 @@ $(document).ready(function(){
         </div>`
 
     var productPage = document.getElementById('product')
-
     productPage.innerHTML = itemHTML
 
-    var toCartButton = document.getElementsByClassName('product-button')[0]
-
     let currentStorage = JSON.parse(localStorage.getItem("item"))
+    console.log(currentStorage.length)
 
-    console.log(currentStorage)
+    let badge = document.getElementById('badge')
+    console.log(badge)
+    badge.innerHTML = `items in cart ${currentStorage.length}`
+
+    var toCartButton = document.getElementsByClassName('product-button')[0]
 
     toCartButton.addEventListener('click', function(event) {
       event.preventDefault()
 
-      if(currentStorage === null){
+      if (currentStorage === null) {
         currentStorage = []
         currentStorage.push(product.id)
-        console.log(currentStorage)
-      }
-
-      else if(currentStorage !== null){
+      } else if (currentStorage !== null) {
         currentStorage.push(product.id)
-        console.log(currentStorage)
       }
 
-    localStorage.setItem("item", JSON.stringify(currentStorage))
+      localStorage.setItem("item", JSON.stringify(currentStorage))
 
-    //   var badge = document.getElementById('badge')
-    //   var badgeHTML = `<span class="badge">1</span>`
-    //   badge.innerHTML = badgeHTML
+      badge.innerHTML = `items in cart ${currentStorage.length}`
+
     })
 
   });

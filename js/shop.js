@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   $.getJSON("js/items.json", function(data) {
 
+
     for (let i = 0; i < data.length; i++) {
       var itemHTML =
         `<a href="product.html?id=${data[i].id}"><div class="card">
@@ -25,30 +26,36 @@ $(document).ready(function() {
       shop.appendChild(card)
     }
 
+    let currentStorage = JSON.parse(localStorage.getItem("item"))
+
+    let badge = document.getElementById('badge')
+    console.log(badge)
+
+    if(currentStorage === null){
+      currentStorage = []
+    }
+
+    badge.innerHTML = `items in cart ${currentStorage.length}`
+
     var plusButton = document.getElementsByClassName('btn-floating')
-
-    let count = 1
-
-    let storage = []
 
     for (let i = 0; i < plusButton.length; i++) {
       plusButton[i].setAttribute('id', `${i}`)
       plusButton[i].addEventListener('click', function(event) {
         event.preventDefault()
-        storage.push(i)
-        localStorage.setItem("item", JSON.stringify(storage))
-        var badge = document.getElementById('badge')
-        var badgeHTML = `<span class="badge">${count}</span>`
-        badge.innerHTML = badgeHTML
-        count++
-        localStorage.setItem('numItems',`${count}`)
+        if(currentStorage === null){
+          currentStorage = []
+          currentStorage.push(i)
+          console.log(currentStorage)
+        }
+
+        else if(currentStorage !== null){
+          currentStorage.push(i)
+          console.log(currentStorage)
+        }
+        localStorage.setItem("item", JSON.stringify(currentStorage))
+        badge.innerHTML = `items in cart ${currentStorage.length}`
       })
     }
-
-    // let itemsInCart = JSON.parse(localStorage.getItem('item'))
-    //
-    // console.log(itemsInCart.length)
-    // localStorage.setItem('numItems',`${itemsInCart.length}`)
-
   });
 });

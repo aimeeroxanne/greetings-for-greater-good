@@ -1,5 +1,16 @@
 $.getJSON("js/items.json", function(data) {
 
+  let currentStorage = JSON.parse(localStorage.getItem("item"))
+
+  let badge = document.getElementById('badge')
+  console.log(badge)
+
+  if(currentStorage === null){
+    currentStorage = []
+  }
+
+  badge.innerHTML = `items in cart ${currentStorage.length}`
+
 // Getting the array of id's in localStorage
 
   let storage = JSON.parse(localStorage.getItem("item"))
